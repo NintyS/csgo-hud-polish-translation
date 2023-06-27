@@ -15,11 +15,12 @@
 
 				<div class="inner">
 					<div :class="`team-name --${win_team}`">
-						{{ team.name || (win_team === 'ct' ? 'Counter-Terrorists' : 'Terrorists') }}
+						{{ team.name || (win_team === 'ct' ? 'Antyterroryści' : 'Terroryści') }}
 					</div>
 
 					<div class="phrase">
-						{{ team.name ? 'wins' : 'win' }} the Round
+						<!-- {{ team.name ? 'wins' : 'win' }} the Round -->
+						wygrywają rundę
 					</div>
 
 					<div class="reason">
@@ -77,10 +78,10 @@ export default {
 			}
 
 			if (latestRound === -1) return
-			if (this.map.round_wins[latestRound].endsWith('_elimination')) return 'by Eliminating the Enemy Team'
-			if (this.map.round_wins[latestRound].endsWith('_bomb')) return 'by Detonating the Bomb'
-			if (this.map.round_wins[latestRound].endsWith('_defuse')) return 'by Defusing the Bomb'
-			if (this.map.round_wins[latestRound].endsWith('_time')) return 'by Running down the Clock'
+			if (this.map.round_wins[latestRound].endsWith('_elimination')) return 'przez wyeliminowanie wrogiej drużyny'
+			if (this.map.round_wins[latestRound].endsWith('_bomb')) return 'przez zdetonowania bomby'
+			if (this.map.round_wins[latestRound].endsWith('_defuse')) return 'przez rozbrojenie bomby'
+			if (this.map.round_wins[latestRound].endsWith('_time')) return 'przez koniec czasu'
 		},
 	},
 

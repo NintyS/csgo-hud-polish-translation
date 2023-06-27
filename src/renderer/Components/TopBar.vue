@@ -29,7 +29,7 @@
 				</div>
 
 				<div :class="`team-name --${direction} --${directionalSides[Number(direction === 'right')]}`">
-					{{ team.name || (directionalSides[Number(direction === 'right')] === 'ct' ? 'Counter-Terrorists' : 'Terrorists') }}
+					{{ team.name || (directionalSides[Number(direction === 'right')] === 'ct' ? 'Antyterroryści' : 'Terroryści') }}
 				</div>
 
 				<div :class="`round-wins --${direction}`">
@@ -62,7 +62,7 @@
 			<div class="map-no" v-if="seriesData.bestOf !== 1">
 				Map
 				{{ seriesData.wins.left + seriesData.wins.right + 1 }}
-				of
+				z
 				{{ seriesData.bestOf }}
 			</div>
 

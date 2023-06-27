@@ -25,13 +25,13 @@
 
 		<div class="round-no">
 			<template v-if="map.round < 30">
-				Round {{ map.round + 1 - Number(timers.phase === 'over') }}/30
+				Rund {{ map.round + 1 - Number(timers.phase === 'over') }}/30
 			</template>
 
 			<template v-else>
 				OT
 				{{ Math.ceil((map.round - 29) / 6) }}
-				Round
+				Runda <!-- IDK in which case this is will be used -->
 				{{
 					Math.max(1, map.round - 29 - ((Math.ceil((map.round - 29) / 6) - 1) * 6) - Number(timers.phase === 'over'))
 				}}/6
